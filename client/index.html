@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Roll Directive</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <section ng-app="app" ng-controller="MainCtrl as ctrl">
+  <h3>Winner & Partipicants</h3>
+  <p>Winner: {{ ctrl.list.winner }}</p>
+  <p>Participants: {{ ctrl.list.participants }}</p>
+  
+  <h3>Lucky Draw</h3>
+  <spinner list="ctrl.list" index="ctrl.targetIndex"></spinner>
+  <button class="slot__btn" ng-click="ctrl.roll()">ROLL</button>
+  <button class="slot__btn" ng-click="ctrl.stop()">STOP</button>
+</section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
