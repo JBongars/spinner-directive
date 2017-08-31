@@ -69,19 +69,6 @@ app.post("/users", function(req, res) {
     res.status(200).json(user);
 });
 
-app.use(function(req, res, next) {
-    y = 20 / 5;
-    //res.send("<h1>Before the wrong door ! " + y + "</h1>");
-    next();
-});
-
-app.use(function(req, res, next) {
-    console.log(" sorry wrong door -> ");
-    var x = sum(1, y);
-    //res.send("<h1>Sorry wrong door ! " + x + "</h1>");
-    next();
-});
-
 app.use(function(req, res) {
     console.log(" sorry wrong door -> ");
     var x = sum(1, y);
